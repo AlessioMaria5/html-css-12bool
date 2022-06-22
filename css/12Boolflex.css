@@ -22,11 +22,16 @@
 .row {
 
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
-[class*="col-"] {
+.post-row {
+
+    display: flex;
+    flex-wrap: wrap
+}
+
+[class*='col-'] {
 
     flex: 0 0 auto;
 }

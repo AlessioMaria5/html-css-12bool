@@ -9,19 +9,555 @@
     color: white;
     margin: 1px;
     background-color: #0048fd;
-    height: 40px;
-    line-height: 40px;
-    font-size: small;
+    height: 50px;
+
 }
 
+.inner-box {
+
+    background-color: green;
+    margin: 20px;
+
+}
 
 .step {
 
     height: 20px;
 }
 
-.inner-box {
+/********** PIANO ********/
 
-    background-color: green;
+header {
+
+    background-color: #6f6f6f;
+    height: 40px;
 }
+
+.head-box {
+
+    background-color: rgb(255,255,255,0.5);
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+
+
+}
+
+
+li.col-4 {
+
+    list-style: none;
+    text-align: center;
+    line-height: 30px;
+    border-left: 1px solid grey;
+}
+
+li.col-4:hover {
+
+    background: rgba(255,255,255,0.2);
+}
+.fa-scissors {
+
+    transform: rotate(-90deg);
+}
+
+.col-6 .head-box {
+
+    border: rgba(153, 212, 239,0.5) 1px solid;
+    background-color: rgba(23, 23, 23, 1);
+}
+
+.time-line {
+
+    text-align: center;
+    line-height: 30px;
+
+}
+
+.time-line div {
+
+    border-left:  rgba(153, 212, 239,0.5) 1px solid;
+    color: white;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+.bar-line {
+
+    background-color: rgba(23, 23, 23, 1);
+    height: 15px;
+}
+
+main {
+
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    overflow: auto;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+body {
+
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#tracks {
+
+    height: 500px;
+    width: 150px;
+    background-color: rgba(23, 23, 23, 0.8);
+    border-bottom-left-radius: 10px;
+
+    overflow: hidden;
+}
+
+#time-line {
+
+    height: fit-content;
+    background-color: rgba(23, 23, 23, 0.3);
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+}
+
+.col-1 .in-tracks {
+
+    background-color: rgba(23, 23, 23, 0.3);
+    border-right: 1px black solid;
+}
+
+.col-2 .in-tracks {
+
+    border-right: 3px solid black;
+    background-color: rgba(23,23,23,0.3);
+}
+
+.row-tracks {
+
+  
+    border-bottom: rgba(0,0,0,0.9) solid 1px;
+}
+
+.row-measures .col-9 {
+
+    height: 20px;
+    background-color: rgba(23, 23, 23, 0.9);
+    line-height: 20px;
+    color: white;
+    text-align: center;
+}
+
+.row-measures .col-9 .row .col-1 {
+
+    border-right: 1px solid rgba(255,255,255,0.2)
+}
+
+.row-measures .col-3 {
+
+    background-color: rgba(23, 23, 23, 0.9);
+    border-right: 3px solid black;
+
+}
+
+
+.row.measures {
+
+    height: 100%;
+}
+
+.row.measures .col-3 {
+
+    height: 100%;
+    width: 100%;
+    border-right: 1px solid rgba(0,0,0,0.2);
+    color: rgba(255,255,255,0.2);
+}
+
+.column {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.slider {
+
+    width: 3px;
+    background-color: white;
+    height: 40%;
+    position: relative;
+    
+}
+
+.track-pan {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.v-circle {
+
+    background-color: black;
+    position: absolute;
+    bottom: 20%;
+    left: -2px;
+    width: 7px;
+    height: 7px;
+}
+
+.col-4.red {
+    
+    background-color: rgb(205, 90, 90);
+    border: rgba(0,0,0,0.2) 4px solid;
+    position: relative;
+}
+
+.col-6.green {
+
+    background-color: rgb(155, 197, 155);
+    border: rgba(0,0,0,0.2) 4px solid;
+    position: relative;
+}
+
+.col-5.blue {
+
+    background-color: rgb(125, 168, 240);
+    border: rgba(0,0,0,0.2) 4px solid;
+    height: 40px;
+   
+}
+
+.col-5.blue .audio-wave {
+
+    object-fit:cover;
+    height: 100%;
+    transform: scale(1.2);
+    filter: opacity(90%);
+
+
+}
+
+.col-2.yellow {
+
+    background-color: rgb(222, 208, 134);
+    border: rgba(0,0,0,0.2) 4px solid;
+    position: relative;
+}
+/********* NOTES *********/
+
+.note-1 {
+
+    width: 10px;
+    background-color: black;
+    height: 2px;
+    position: absolute;
+    top: 10px;
+
+}
+
+.note-1:nth-of-type(2) {
+
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 20px;
+    left: 0;
+}
+
+.note-1:nth-of-type(3) {
+
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 20px;
+    left: 20px;
+}
+
+.note-1:nth-of-type(4) {
+
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 20px;
+    left: 40px;
+}
+
+.note-1:nth-of-type(5) {
+
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 10px;
+    left: 40px;
+}
+
+.note-1:nth-of-type(6) {
+
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 20px;
+    left: 60px;
+}
+
+.note-1:nth-of-type(7) {
+
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 20px;
+    left: 80px;
+}
+
+.note-1:nth-of-type(8) {
+
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 20px;
+    left: 100px;
+}
+
+.note-1:nth-of-type(9) {
+
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 20px;
+    left: 120px;
+}
+
+.note-1:nth-of-type(10) {
+
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 10px;
+    left: 140px;
+}
+
+.note-1:nth-of-type(11) {
+
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 5px;
+    left: 160px;
+}
+
+.note-1:nth-of-type(12) {
+
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 20px;
+    left: 180px;
+}
+
+.note-1:nth-of-type(13) {
+
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 10px;
+    left: 200px;
+}
+
+.note-1:nth-of-type(14) {
+
+    position: absolute;
+
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 25px;
+    left: 190px;
+}
+
+.note-2 {
+
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background-color: black;
+    top: 25px;
+    left: 0px;
+}
+
+.note-2:nth-of-type(2) {
+
+    top: 20px;
+    left: 20px;
+}
+
+.note-2:nth-of-type(3) {
+
+    top: 10px;
+    left: 20px;
+    width: 20px;
+}
+
+.note-2:nth-of-type(4) {
+
+    top: 15px;
+    left: 30px;
+}
+
+.note-2:nth-of-type(5) {
+
+    top: 12px;
+    left: 40px;
+}
+
+.note-2:nth-of-type(6) {
+
+    top: 14px;
+    left: 50px;
+}
+
+.note-2:nth-of-type(7) {
+
+    top: 20px;
+    left: 60px;
+}
+
+.note-2:nth-of-type(8) {
+
+    top: 20px;
+    left: 80px;
+}
+
+.note-2:nth-of-type(9) {
+
+    top: 20px;
+    left: 100px;
+    width: 50px;
+}
+
+.note-2:nth-of-type(10) {
+
+    top: 10px;
+    left: 100px;
+    width: 50px;
+}
+
+.note-2:nth-of-type(11) {
+
+    top: 15px;
+    left: 100px;
+    width: 50px;
+}
+
+.note-2:nth-of-type(12) {
+
+    top: 20px;
+    left: 160px;
+    width: 70px;
+}
+
+.note-2:nth-of-type(13) {
+
+    top: 15px;
+    left: 160px;
+    width: 70px;
+}
+
+.note-2:nth-of-type(14) {
+
+    top: 8px;
+    left: 160px;
+    width: 70px;
+}
+
+.note-2:nth-of-type(15) {
+
+    top: 20px;
+    left: 250px;
+}
+
+.note-2:nth-of-type(16) {
+
+    top: 25px;
+    left: 270px;
+}
+
+.note-2:nth-of-type(17) {
+
+    top: 20px;
+    left: 300px;
+}
+
+
+.note-2:nth-of-type(18) {
+
+    top: 15px;
+    left: 320px;
+}
+
+
+.note-2:nth-of-type(19) {
+
+    top: 20px;
+    left: 340px;
+}
+
+
+/**** NOTES *****/
+
+.track-name {
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    color: rgb(74, 74, 74)
+}
+
+.fa-circle {
+
+    color: rgba(74,74,74);
+    position: relative;
+}
+
+.fa-circle::after {
+
+    content: " ";
+    border: white 1px solid;
+    height: 1px;
+    position: absolute;
+    top: 5px;
+    left: 20%;
+
+}
+
+
 
