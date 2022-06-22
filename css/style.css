@@ -1,0 +1,27 @@
+.container {
+
+    width: 80%;
+}
+
+.box {
+
+    text-align: center;
+    color: white;
+    margin: 1px;
+    background-color: #0048fd;
+    height: 40px;
+    line-height: 40px;
+    font-size: small;
+}
+
+
+.step {
+
+    height: 20px;
+}
+
+.inner-box {
+
+    background-color: green;
+}
+
