@@ -43,6 +43,11 @@ header {
 
 }
 
+.head-box:hover {
+
+    background-color: rgba(153, 212, 239,0.5);
+}
+
 
 li.col-4 {
 
@@ -74,6 +79,11 @@ li.col-4:hover {
 
 }
 
+.time-line [class*="col-"]:hover {
+
+    background-color: rgb(152, 193, 213);
+}
+
 .time-line div {
 
     border-left:  rgba(153, 212, 239,0.5) 1px solid;
@@ -93,17 +103,16 @@ main {
     flex-direction: row;
     height: 500px;
     overflow: auto;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
 
 }
 
 body {
 
     width: 90%;
-    height: 100vh;
+    height: fit-content;
     margin: auto;
     margin-top: 20px;
+    border: black 5px solid;
 }
 
 #tracks {
@@ -111,7 +120,7 @@ body {
     height: 500px;
     width: 150px;
     background-color: rgba(23, 23, 23, 0.8);
-    border-bottom-left-radius: 10px;
+  
 
     overflow: hidden;
 }
