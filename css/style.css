@@ -123,6 +123,7 @@ body {
     width: 100%;
     text-align: center;
     line-height: 40px;
+    position: relative;
 }
 
 .col-1 .in-tracks {
@@ -216,6 +217,8 @@ body {
     background-color: rgb(205, 90, 90);
     border: rgba(0,0,0,0.2) 4px solid;
     position: relative;
+
+    
 }
 
 .col-6.green {
@@ -558,6 +561,156 @@ body {
     left: 20%;
 
 }
+
+.pointer {
+
+    width: 3px;
+    height: 500px;
+    background-color: rgb(120, 234, 100);
+    position: absolute;
+    top: 0;
+    left: 285px;
+    z-index: 300;
+    animation: playmove 15s linear;
+}
+
+.pointer::after {
+
+    content: "";
+    width: 10px;
+    height: 15px;
+    background-color: rgb(48, 48, 48);
+    position: absolute;
+    top: 0;
+    left: -2px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+@keyframes playmove {
+
+    0% {
+
+        left:285px;
+    }
+
+    100% {
+
+        left: 100%;
+    }
+}
+
+.recording {
+
+    position: absolute;
+
+    bottom: 60px;
+    right: 60px;
+    z-index: 400;
+    background-color: rgba(68, 68, 68, 1);
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 10px;
+}
+
+.recording::after {
+
+    content: " ";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(193, 40, 40);
+    position: absolute;
+
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+}
+
+.recording-m {
+
+    position: absolute;
+
+    bottom: 60px;
+    right: 120px;
+    z-index: 400;
+    background-color: rgba(68, 68, 68, 1);
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 10px;
+
+    transform: rotate(180deg);
+}
+
+.in-metronome::after {
+
+    content: " ";
+    width: 3px;
+    height: 25px;
+    background-color: rgb(233, 233, 233);
+    position: absolute;
+    transform: rotate(30deg);
+
+    top: calc(50% - 12px);
+    left: calc(50% - 8px);
+    animation: metronome 1s infinite;
+}
+
+
+@keyframes metronome {
+
+    0% {
+
+        left: calc(50% - 10px);
+      
+    }
+
+    50% {
+
+        transform: rotate(-30deg);
+        left: calc(50% + 8px);
+       
+      
+
+    }
+
+    100% {
+
+        left: calc(50% - 10px);
+        
+
+    }
+}
+
+.in-metronome::before {
+
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background-color: rgb(233,233,233);
+    top: 5px;
+    left:  calc(50% - 10px);
+}
+
+.recording:hover {
+
+    background-color: rgb(219, 95, 95);
+
+    
+}
+
+[class*="red"]:hover ,  [class*="yellow"]:hover , [class*="green"]:hover , [class*="blue"]:hover {
+
+    background-color: rgba(255,255,255,0.5);
+}
+
+
+
+
 
 
 
